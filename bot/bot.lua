@@ -1,7 +1,7 @@
 tdcli = dofile('./tg/tdcli.lua')
 serpent = (loadfile "./libs/serpent.lua")()
 feedparser = (loadfile "./libs/feedparser.lua")()
-our_id = 123456789 -- Put Here Your Bot ID
+our_id = 347817802 -- Put Here Your Bot ID
 URL = require "socket.url"
 http = require "socket.http"
 https = require "ssl.https"
@@ -98,19 +98,16 @@ function create_config( )
     admins = {},
     disabled_channels = {},
     moderation = {data = './data/moderation.json'},
-    info_text = [[》bom_bang v3
+    info_text = [[ spłÐΞЯ》 вøт v5
 
-🔰Our channel :
-》@sudo_monsters《
+🔰Sudo вøт :
+》@King_Dis_love《
 
 🔰Our channel2 :
-》@bom_bang_team《
-
-🔰Our channel3 :
-》@bombangteam《
+》@LockerTeam《
 
 🔰Our website :
-》http://telebombang2018
+》----------------
 ]],
   }
   serialize_to_file(config, './data/config.lua')
@@ -500,9 +497,9 @@ local lang = redis:get(hash)
     local i = 1
   if not data[tostring(chat_id)] then
   if not lang then
-    return '_Group is not added_'
+    return '❌Group is not added_❌'
 else
-    return 'گروه به لیست گروه های مدیریتی ربات اضافه نشده است'
+    return '❌گروه به لیست گروه های مدیریتی ربات اضافه نشده است'
    end
   end
   -- determine if table is empty
@@ -595,9 +592,9 @@ local lang = redis:get(hash)
     end
   if not data[tostring(msg.chat_id_)] then
   if not lang then
-    return '_Group is not added_'
+    return '❌Group is not added❌'
 else
-    return 'گروه به لیست گروه های مدیریتی ربات اضافه نشده است'
+    return '❌گروه به لیست گروه های مدیریتی ربات اضافه نشده است'
    end
   end
   -- determine if table is empty
