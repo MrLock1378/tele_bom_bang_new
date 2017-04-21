@@ -14,7 +14,7 @@ local function pre_process(msg)
 	end
 	if tonumber(timetoexpire) == 0 then
 		if redis:hget('expires0',msg.chat_id_) then end
-		tdcli.sendMessage(msg.chat_id_, 0, 1, '*⚠️مدت استفاده ربات شما تمام شده است لطفا آن را تمدید کنید*.', 1, 'md')
+		tdcli.sendMessage(msg.chat_id_, 0, 1, '*⚠️مدت استفاده ربات شما تمام شده است لطفا آن را تمدید کنید*. :)', 1, 'md')
 		redis:hset('expires0',msg.chat_id_,'5')
 	end
 	if tonumber(timetoexpire) == 1 then
@@ -39,7 +39,7 @@ function run(msg, matches)
 		local expiretime = redis:hget ('expiretime', msg.chat_id_)
 		if not expiretime then return '*Unlimited*' else
 			local now = tonumber(os.time())
-			return (math.floor((tonumber(expiretime) - tonumber(now)) / 86400) + 1) .. " *روز باقی مانده⏱*"
+			return (math.floor((tonumber(expiretime) - tonumber(now)) / 86400) + 1) .. ":) *روز باقی مانده⏱*"
 		end
 	end
 
