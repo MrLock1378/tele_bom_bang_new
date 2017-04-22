@@ -90,11 +90,12 @@ function create_config( )
 	"nerkh",
 	"Write",
 	"monshi",
+	"info",
 	"bombanghelp",
 	"lock-fosh"
 	
  },
-    sudo_users = {310083510},
+    sudo_users = {374734484},
     admins = {},
     disabled_channels = {},
     moderation = {data = './data/moderation.json'},
